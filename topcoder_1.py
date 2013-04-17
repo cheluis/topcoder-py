@@ -15,3 +15,35 @@ class StringDup():
 				output_item_value = v
 		return output_item
 
+
+class Syntax():
+	def match(self, entry):
+		stack = []
+		for char in entry:
+			if char == '(' or char == '[' or char == '{':
+				stack.append(char)
+			elif char == ']':
+				try:
+					aux = stack.pop()
+					if aux != '[':
+						return False
+				except:
+					return False		
+			elif char == '}':
+				try:
+					aux = stack.pop()
+					if aux != '{':
+						return False
+				except:
+					return False
+			elif char == ')':
+				try:
+					aux = stack.pop()
+					if aux != '(':
+						return False
+				except:
+					return False
+		if len(stack) > 0:
+			return False
+		return True
+		
