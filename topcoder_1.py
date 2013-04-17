@@ -13,4 +13,5 @@ class StringDup():
 			if k > output_item_value:
 				output_item = k
 				output_item_value = v
+		return output_item
 
