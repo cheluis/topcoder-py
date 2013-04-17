@@ -9,7 +9,7 @@ class StringDup():
 				entry_quants[letter] = entry_quants[letter] + 1
 		output_item = entry[0]
 		output_item_value = entry_quants[output_item]
-		for k, v in entry_quants.items()
+		for k, v in entry_quants.items():
 			if k > output_item_value:
 				output_item = k
 				output_item_value = v
